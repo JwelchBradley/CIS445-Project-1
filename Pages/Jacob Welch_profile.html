@@ -11,12 +11,40 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <link href="../Styling/JacobWelch_design.css" rel="stylesheet" type="text/css">
     </head>
     <body>
-        <h1 class="title">Jacob Welch</h1>
+                <h1 class="title">Jacob Welch</h1>
         
+        <nav>
+                    <a href="Jacob Welch_profile.html" class="activateNav">Profile</a>
+                    <a href="Jacob Welch_reflection.html">Reflection</a>
+                    <a href="Jacob Welch_achievements.html">Achievements</a>
+                    <a href="Jacob Welch_qualifications.html">Qualifications</a>
+                    <a href="Jacob Welch_contact.html">Contact</a>
+        </nav>
+                
         <div class="masthead">
-            <h2>Game Designer Software Developer</h2>
+            <h2 id="SwapOut">Game<br>Designer</h2>
         </div>
         
+        <script type="text/javascript">    
+            var text = ["Software<br>Engineer", "Web<br>Developer", "Game<br>Designer"];
+            var timeBetweenSwaps = 1500;
+            
+            SwapOutProfile();
+            
+            function SwapOutProfile(){
+                var i = 0;
+                                
+                setInterval(function() {
+                    document.getElementById("SwapOut").innerHTML = text[i];
+                    i++;
+                    i %= text.length;
+                }, timeBetweenSwaps);
+               
+            }
+        </script>
+                
+                <div class="profilepagetextpadding">
+
         <div class="pagetext">
         <h2>About Me</h2>
         <p>
@@ -47,9 +75,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         
         <h2>Beliefs</h2>
         <ul>
-            <li>Learning new things all the time</li>
-            <li>Honest communication and feedback</li>
-            <li>Games that are both fun and competitively viable</li>
+            <li>Being kind to other people will generally inspire them to be nice back.</li>
+            <li>People should have the right to feel compfortable about themselves.</li>
+            <li>Lying is one of the worst things that a person can do.</li>
         </ul>
         
         <h2>Career Goals</h2>
@@ -75,5 +103,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         </p>
         
         </div>
+                </div>
+
     </body>
 </html>
